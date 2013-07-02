@@ -419,7 +419,7 @@ module Sass::Script::Value
     # : Adds each of the RGB color channels together.
     #
     # {Value}
-    # : See {Value#plus}.
+    # : See {Value::Base#plus}.
     #
     # @param other [Value] The right-hand side of the operator
     # @return [Color] The resulting color
@@ -442,7 +442,7 @@ module Sass::Script::Value
     # : Subtracts each of the other color's RGB color channels from this color's.
     #
     # {Value}
-    # : See {Value#minus}.
+    # : See {Value::Base#minus}.
     #
     # @param other [Value] The right-hand side of the operator
     # @return [Color] The resulting color
@@ -485,7 +485,7 @@ module Sass::Script::Value
     # : Divides each of this color's RGB color channels by the other color's.
     #
     # {Value}
-    # : See {Value#div}.
+    # : See {Value::Base#div}.
     #
     # @param other [Value] The right-hand side of the operator
     # @return [Color] The resulting color
