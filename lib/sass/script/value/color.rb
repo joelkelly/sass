@@ -248,8 +248,13 @@ module Sass::Script::Value
       @attrs[:alpha] = Sass::Util.check_range("Alpha channel", 0..1, @attrs[:alpha])
     end
 
+    # Create a new color from a valid CSS hex string.
+    #
+    # The leading hash is optional.
+    #
+    # @return [Color]
     def self.from_hex(hex_string, alpha = nil)
-      unless hex_string =~ /^#?(..?)(..?)(..?)$/
+      unless hex_string =~ /^#?([0-9a-fA-F]{1,2})([0-9a-fA-F]{1,2})([0-9a-fA-F]{1,2})$/
         raise ArgumentError.new("#{hex_string.inspect} is not a valid hex color.")
       end
       red   = $1.ljust(2, $1).to_i(16)

@@ -10,6 +10,7 @@ module Sass::Script::Value
     # We override object creation so that users of the core API
     # will not need to know that null is a specific constant.
     #
+    # @private
     # @return [Null] the {NULL} constant.
     def self.new
       NULL
