@@ -126,6 +126,8 @@ class Sass::Tree::Visitors::ToCss < Sass::Tree::Visitors::Base
     tab_str = '  ' * (@tabs + node.tabs)
     if node.style == :compressed
       "#{tab_str}#{node.resolved_name}:#{node.resolved_value}"
+    elsif node.style == :compact
+      "#{tab_str}#{node.resolved_name}:#node.resolved_value}"
     else
       "#{tab_str}#{node.resolved_name}: #{node.resolved_value};"
     end
