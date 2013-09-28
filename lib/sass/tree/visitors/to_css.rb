@@ -53,7 +53,7 @@ class Sass::Tree::Visitors::ToCss < Sass::Tree::Visitors::Base
 
   def visit_charset(node)
     "@charset \"#{node.name}\";"
-  end 
+  end
 
   def visit_comment(node)
     return if node.invisible?
@@ -127,7 +127,7 @@ class Sass::Tree::Visitors::ToCss < Sass::Tree::Visitors::Base
     if node.style == :compressed
       "#{tab_str}#{node.resolved_name}:#{node.resolved_value}"
     elsif node.style == :compact
-      "#{tab_str}#{node.resolved_name}:#node.resolved_value}"
+      "#{tab_str}#{node.resolved_name}:#{node.resolved_value}"
     else
       "#{tab_str}#{node.resolved_name}: #{node.resolved_value};"
     end
